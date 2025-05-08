@@ -1,0 +1,253 @@
+.foto {
+    background-image: url('img/stul2.jpg');
+    position: relative;
+    height: 100vh;
+    padding-bottom: 0px;
+    background-size: cover;    
+    background-repeat: no-repeat;  
+    background-position: center;
+}
+
+.foto::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: -1;
+}
+
+.intro {
+    padding: 180px 20px;
+    text-align: center;
+    position: relative; 
+    color: #FFF; 
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.intro p{
+    font-size: 25px; 
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111; /* nebo třeba #111 pro tmavý styl */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.background-paper {
+    background-image: url('img/papir.jpg');
+    background-size: cover; 
+    background-position: center;
+    padding: 20px;
+    color: black; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); 
+}
+
+.background-paper h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000; /* Nastaví text na tmavou barvu */
+    text-align: center;
+}
+
+section {
+    padding-left: 40px;
+    text-align: center;
+}
+
+section p{
+    font-size: 25px;
+}
+
+section ul {
+    margin-top: 10px;
+    margin-left: 40px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.slider-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    touch-action: pan-y;
+    cursor: grab;
+    text-align: center;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Zarovná karty k hornímu okraji */
+    padding: 30px;
+}
+
+.card {
+    flex: 1;
+    max-width: 33.333%;
+    padding: 20px;
+    text-align: center;
+    user-select: none;
+    transform: scale(0.9);
+    opacity: 0.7;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card.active {
+    transform: scale(1.2);
+    opacity: 1;
+    z-index: 1;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    pointer-events: none;
+    display: block;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+  .slider {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+    transform: scale(1); /* žádné zmenšení */
+    opacity: 1;
+    margin-bottom: 20px;
+  }
+
+  .card.active {
+    transform: scale(1); /* zrušíme zvětšení aktivní karty */
+  }
+}
+
+footer {
+    background-image: url('img/background-footer.jpg');
+    color: #fff;
+    padding: 40px 20px 20px;
+    text-align: center;   
+    background-repeat: no-repeat;  
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    width: 220px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-section h3:hover {
+    color: #e74c3c;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.map-link i {
+  margin-right: 8px;
+  color: #e74c3c; /* červená jako Google Maps */
+  font-size: 1.2em;
+}
+
+.map-link:hover {
+  color: #e74c3c;
+}
+
+.socials {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 8px;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+.social-icon {
+  margin: 0 8px;
+  font-size: 1.5em;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-icon.facebook:hover {
+  color: #3b5998; /* Facebook modrá */
+}
+
+.social-icon.instagram:hover {
+  color: #e1306c; /* Instagram růžovo-fialová */
+}

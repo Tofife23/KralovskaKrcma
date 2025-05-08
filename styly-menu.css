@@ -1,0 +1,302 @@
+.specialities h2 {
+    text-align: center;
+    width: 100%;
+    margin: 10px 0 20px 0;
+    font-size: 1.8rem;
+}/* Opravené CSS pro responzivitu a centrování */
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgba(24, 24, 24, 1);
+}
+
+.menu-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    padding: 0; /* Zajistí, že tam nebude žádný padding */
+    margin: 0 auto; 
+}
+
+header, .menu-section {
+    padding: 0;
+    margin: 0;
+}
+
+.menu-column {
+    padding: 0;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;  /* Přidáno pro správné fungování flex vlastností */
+    flex-direction: column;  /* Umožní, aby texty byly pod sebou */
+    align-items: center;  /* Centrování obsahu */
+    text-align: center;  /* Ujistí se, že texty budou centrované */
+    margin: 0 auto;  /* Auto margin pro centrování */
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.food {
+    margin: 0;
+    padding: 0;
+    width: 100%;  /* Pokud máš konkrétní šířku */
+}
+
+.specialities {
+    text-align: center;
+    width: 100%;
+    padding: 0 20px; /* Přidání paddingu pro mobilní zobrazení */
+    margin: 30px 0; /* Přidán vertikální margin pro oddělení sekcí */
+}
+
+.menu-column h2 {
+    margin-bottom: 20px;
+}
+
+.menu-column ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-column ul li {
+    font-size: 1.2rem;
+    margin: 0 auto; /* Auto margin pro centrování */
+    text-align: center; /* Zajistí zarovnání na střed */
+    padding: 0;
+    width: 100%; /* Zajištění plné šířky */
+}
+
+.speciality-container {
+    display: flex;
+    justify-content: center; /* Změněno na center */
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 0; /* Odstraní případný padding */
+    margin: 0 auto; /* Auto marže pro centrování */
+    width: 100%; /* Zajistí plnou šířku kontejneru */
+}
+
+.speciality-item {
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Vycentrování obrázku a textu */
+    justify-content: flex-start; /* Začíná nahoře */
+}
+
+.speciality-item img {
+    width: 100%;
+    height: 200px; /* Pevná výška pro všechny obrázky */
+    object-fit: cover; /* Zajistí, že obrázek pokryje celou oblast bez zkreslení */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.speciality-item h3 {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.speciality-item p {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%; /* Zajistí plnou šířku pro text */
+    margin: 5px 0;
+}
+
+.roll-wrapper {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Texturina', serif;
+    width: 100%;
+    padding: 0 20px; /* Přidáno pro lepší zarovnání na mobilu */
+}
+
+#rollButton {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #8b5e3c;
+    color: #fff9f0;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#rollButton:hover {
+    background-color: #a56b44;
+}
+
+.roll-label {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.roll-section {
+    margin: 30px auto;
+    width: 280px;
+}
+
+/* Animace pro zlatou záři */
+.result-box {
+    padding: 1rem;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 1.5rem;
+    background: #1a1a1a;
+    color: white;
+    width: 300px;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+}
+
+.result-box.glow {
+    box-shadow: 0 0 20px 5px gold;
+    animation: glowPulse 1.5s ease-out;
+}
+
+@keyframes glowPulse {
+    0%   { box-shadow: 0 0 0px gold; }
+    50%  { box-shadow: 0 0 25px 10px gold; }
+    100% { box-shadow: 0 0 20px 5px gold; }
+}
+
+.roller {
+    height: 60px;
+    overflow: hidden;
+    border: 3px solid #6b4d28;
+    border-radius: 8px;
+    background: #fffdf6;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.roller-inner {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    transition: transform 3s ease-out;
+}
+
+.roller-inner div {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    border-bottom: 1px solid #eee;
+}
+
+/* Přidání mediaqueries pro lepší rozložení na menších obrazovkách */
+@media (max-width: 1024px) {
+    .speciality-item {
+        width: 45%; /* Na menších obrazovkách 2 položky na řádek */
+    }
+}
+
+@media (max-width: 881px) {
+    h1 {
+        padding-top: 120px;
+    }
+}
+
+@media (max-width: 768px) {    
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        width: 100%; /* Zajistí plnou šířku */
+        max-width: 100%; /* Omezí maximální šířku */
+    }
+
+    .menu-column {
+        width: 100%;
+        margin: 0 auto 20px auto; /* Centrování pomocí auto margin */
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .speciality-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 10px; /* Zajistí správné zarovnání na mobilu */
+    }
+
+    .speciality-item {
+        width: 100%; /* Změněno na 100% pro lepší zobrazení na mobilu */
+        margin-bottom: 20px;
+        padding: 15px; /* Snížený padding pro lepší vzhled na mobilu */
+    }
+
+    .menu-column ul li {
+        font-size: 1.4rem;  /* Zvětšení písma pro lepší čitelnost */
+        margin: 15px auto;  /* Větší mezery mezi položkami a centrování */
+        padding: 0;
+        text-align: center; /* Zajistí centrování textu */
+        display: block;
+        width: 100%;
+        max-width: 300px; /* Omezení maximální šířky */
+    }
+
+    .menu-column h2 {
+        font-size: 1.6rem;  /* Zvětšení nadpisu pro mobil */
+        text-align: center; /* Zajistí centrování nadpisu */
+    }
+
+    .speciality-item img {
+        max-width: 100%;  /* Umožní obrázkům být plně responzivní */
+    }
+
+    .menu-section {
+        padding: 10px 0; /* Přidán vertikální padding */
+    }
+    
+    .specialities h2 {
+        text-align: center;
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    .speciality-item h3, .speciality-item p {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 603px) {
+    h1 {
+        padding-top: 100px;
+    }
+}
